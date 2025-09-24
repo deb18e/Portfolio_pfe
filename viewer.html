@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visionneuse PDF</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body { margin: 0; }
+    .viewer-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--bg-elev); border-bottom: 1px solid var(--border); }
+    .viewer-actions { display: flex; gap: 10px; }
+    .frame { width: 100%; height: calc(100vh - 56px); border: 0; background: #222; }
+  </style>
+  <script>
+    function getParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const file = getParam('file');
+      const frame = document.getElementById('frame');
+      const dl = document.getElementById('download');
+      if (!file) {
+        document.getElementById('title').textContent = 'Aucun fichier fourni';
+        return;
+      }
+      const url = decodeURIComponent(file);
+      frame.src = url;
+      dl.href = url;
+      // probe existence
+      fetch(url, { method: 'HEAD' }).then(r => {
+        if (!r.ok) throw new Error();
+      }).catch(() => {
+        document.getElementById('fallback').style.display = 'block';
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="viewer-header">
+    <div id="title">Visionneuse PDF</div>
+    <div class="viewer-actions">
+      <a id="download" class="btn" href="#" download>Télécharger</a>
+      <a class="btn" href="./">← Retour</a>
+    </div>
+  </div>
+  <iframe id="frame" class="frame"></iframe>
+  <div id="fallback" class="container" style="display:none; padding: 16px;">
+    <p class="muted">Impossible d'afficher le PDF. <a id="download" href="#">Téléchargez le fichier.</a></p>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emna Debbech • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#top">Emna <strong>DEBBECH</strong></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#stage">Stages</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="Basculer le thème">🌙</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Élève ingénieure en Intelligence Artificielle</h1>
+        <p>Double diplôme ENSEM / Master IA2VR • Nancy</p>
+        <p class="sub">À la recherche d'un projet de fin d'études (mars–août 2026) en IA appliquée à la robotique et aux systèmes embarqués.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Me contacter</a>
+          <a class="btn" href="#projets">Voir mes projets</a>
+          <a id="cvLink" class="btn" href="assets/pdf/cv_portfolio.pdf" target="_blank" rel="noreferrer">Mon CV</a>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <img class="avatar" src="assets/img/photo_portefolio.png" alt="Photo d'Emna Debbech" onerror="this.style.display='none'">
+        <ul class="contact-list">
+          <li>📞 +33 7 71 45 14 00</li>
+          <li>✉️ e.debbech2002@gmail.com</li>
+          <li>📍 Nancy, France</li>
+          <li>
+            <a href="https://www.linkedin.com/in/emnadebbech" target="_blank" rel="noreferrer">LinkedIn</a>
+            ·
+            <a href="https://github.com/deb18e" target="_blank" rel="noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="profil" class="section container">
+      <h2>Profil</h2>
+      <p>Élève ingénieure en 3ᵉ année à l'ENSEM et étudiante en Master IA2VR à Nancy, je recherche un projet de fin d'études (mars–août 2026) en intelligence artificielle appliquée à la robotique ou aux systèmes embarqués. Formée à la modélisation probabiliste, au Deep Learning et à la planification pour robots autonomes, je suis capable de concevoir, entraîner et déployer des modèles IA pour systèmes embarqués avec contraintes temps réel.</p>
+    </section>
+
+    <section id="formation" class="section container">
+      <h2>Formation</h2>
+      <ul class="timeline">
+        <li>
+          <div class="time">2025 – Présent</div>
+          <div class="card">
+            <h3>Master 2 Informatique — IA et Applications aux Systèmes et à la Robotique (IA2VR)</h3>
+            <p>Université de Lorraine, Nancy — Apprentissage statistique, Deep Learning, traitement et modélisation d'images, planification et apprentissage pour le contrôle de robotique.</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">2023 – Présent</div>
+          <div class="card">
+            <h3>École d'ingénieur ENSEM — Spécialité systèmes autonomes</h3>
+            <p>Algorithme de perception et commande, traitement d'images, IA embarquée, robotique.</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">2020 – 2023</div>
+          <div class="card">
+            <h3>Classe Préparatoire pour Grandes Ecoles — Esprit Prépa (Ariana, Tunisie)</h3>
+            <p>Spécialité mathématiques et physique.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="stage" class="section container">
+      <h2>Stages</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>INRIA / LORIA — Nancy, France</h3>
+          <p class="muted">Juillet – Août 2025</p>
+          <ul>
+            <li>Modélisation de la prise de décision sous incertitude (POMDP).</li>
+            <li>Planification et apprentissage par renforcement (Python, Gymnasium).</li>
+            <li>Renforcement des compétences en Deep Learning et planification.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Tunisair Technics — Tunis, Tunisie</h3>
+          <p class="muted">Juillet 2024</p>
+          <ul>
+            <li>Observation des processus de maintenance avionique (essentiellement avion de type Airbus).</li>
+            <li>Introduction aux systèmes embarqués aéronautiques.</li>
+            <li>Diagnostic technique de systèmes complexes.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projets" class="section container">
+      <h2>Projets d'études</h2>
+      <div class="grid">
+        <article class="card" data-project="leaves">
+          <h3>Classification de feuilles d'arbres par CNN</h3>
+          <p class="subtitle">dans le cadre de l'ENSEM</p>
+          <p class="muted">Python • TensorFlow • Avril–Mai 2025</p>
+          <p>Reconnaissance de 32 espèces de feuilles, optimisation des hyperparamètres et évaluation.</p>
+        </article>
+        <article class="card" data-project="twizzy">
+          <h3>Twizzly — Vision & Détection pour robot</h3>
+          <p class="subtitle">dans le cadre de l'ENSEM</p>
+          <p class="muted">Java & OpenCV • Python • Février–Juin 2025</p>
+          <p>Pipeline vision par ordinateur, reconnaissance de panneaux, intégration module avec CNN.</p>
+        </article>
+        <article class="card" data-project="sami">
+          <h3>SAMI — Robot Lego Autonome</h3>
+          <p class="subtitle">dans le cadre de l'ENSEM</p>
+          <p class="muted">Févr. 2024 – Juin 2024</p>
+          <p>Chaîne de commande d'un robot Lego Ev3 pour navigation autonome multi‑points.</p>
+        </article>
+        <article class="card" data-project="labyrinthe">
+          <h3>Balade dans un labyrinthe — Jeu Java</h3>
+          <p class="subtitle">dans le cadre de l'ENSEM</p>
+          <p class="muted">Java & Maven • 2024</p>
+          <p>Interface graphique et architecture logicielle modulaire.</p>
+        </article>
+        <article class="card" data-project="tetris">
+          <h3>TETRIS sur ESP32</h3>
+          <p class="subtitle">dans le cadre de l'ENSEM</p>
+          <p class="muted">C++ • ESP32 • Nov–Mar 2024</p>
+          <p>Réalisation d'un jeu Tetris avec affichage LED, conception mécanique du boîtier.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="competences" class="section container">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <div>
+          <h3>Langages</h3>
+          <p>Python, C/C++, Java, MATLAB</p>
+        </div>
+        <div>
+          <h3>IA / ML</h3>
+          <p>RN, CNN, RNN, Q-learning, apprentissage par renforcement</p>
+        </div>
+        <div>
+          <h3>Vision</h3>
+          <p>OpenCV, traitement d'images</p>
+        </div>
+        <div>
+          <h3>Microcontrôleurs</h3>
+          <p>ESP32</p>
+        </div>
+        <div>
+          <h3>Outils</h3>
+          <p>Git/GitLab, ROS, Docker</p>
+        </div>
+        <div>
+          <h3>Web</h3>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div>
+          <h3>Données</h3>
+          <p>MySQL</p>
+        </div>
+        <div>
+          <h3>Bureautique</h3>
+          <p>Word, Excel, PowerPoint</p>
+        </div>
+        <div>
+          <h3>Langues</h3>
+          <p>Arabe (maternelle), Français (bilingue), Anglais (avancé C1), Allemand (intermédiaire A2)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <form class="contact-form" name="contact" netlify>
+        <div class="row">
+          <label>Nom
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+        </div>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Envoyer</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal projet -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" aria-label="Fermer" data-close>×</button>
+      <div class="modal__header">
+        <h3 id="modalTitle">Détails du projet</h3>
+        <p id="modalSubtitle" class="subtitle">dans le cadre de l'ENSEM</p>
+      </div>
+      <div id="modalBody" class="modal__body"></div>
+      <div class="modal__footer">
+        <a id="modalPdf" class="btn primary" href="#" target="_blank" rel="noreferrer">Ouvrir le PDF</a>
+        <button class="btn primary" data-close>Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Emna Debbech. Tous droits réservés.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
