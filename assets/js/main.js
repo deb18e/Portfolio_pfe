@@ -40,6 +40,16 @@ if (themeToggle) {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Contact form - Netlify submission (let the browser POST; show status)
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+if (contactForm) {
+  contactForm.addEventListener('submit', () => {
+    if (formStatus) formStatus.textContent = 'Envoi en cours…';
+  });
+  // After page reload on success, Netlify can redirect; we keep lightweight here
+}
+
 // Robust open for CV PDF
 // Remove any special handling for CV; let the browser open the PDF directly
 
@@ -68,7 +78,7 @@ const PROJECTS = {
   },
   labyrinthe: {
     title: 'Balade dans un labyrinthe — Jeu Java',
-    pdf: '#',
+    pdf: 'assets/pdf/labyrinthe_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Développement d'un jeu vidéo de labyrinthe avec interface graphique immersive en Java, dans le cadre d'un projet de développement logiciel en équipe à l'ENSEM.</p>
       <p><strong>Tâche</strong> : Concevoir et implémenter des classes robustes et bien intégrées à l'architecture logicielle définie collectivement, en se focalisant sur les fonctionnalités de base des entités du jeu.</p>
@@ -80,10 +90,9 @@ const PROJECTS = {
       <p><strong>Résultat</strong> : Livraison d'une application aboutie et pleinement opérationnelle : jeu fonctionnel, fluide et stable offrant une expérience immersive; code bien architecturé facilitant la maintenance et les évolutions; retours positifs des enseignants sur la fluidité des interactions et l'expérience utilisateur.</p>
     `,
   },
-  leaves: { title: 'Classification de feuilles par CNN', pdf: '#', html: '<p>Contenu à venir.</p>' },
   leaves: {
     title: 'Classification de feuilles par CNN',
-    pdf: '#',
+    pdf: 'assets/pdf/leaves_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Conception et entraînement d'un modèle de classification d'images d'espèces de feuilles d'arbres par CNN, dans le cadre d'un cours sur les méthodes d'apprentissage automatique.</p>
       <p><strong>Tâche</strong> : Développer un pipeline complet de Deep Learning, de la préparation des données à l'évaluation du modèle, en validant d'abord l'approche sur 4 espèces puis en étendant le modèle à 32 espèces avec une précision optimale.</p>
@@ -98,7 +107,7 @@ const PROJECTS = {
   },
   twizzy: {
     title: 'Twizzy — Vision & Détection',
-    pdf: '#',
+    pdf: 'assets/pdf/twizzy_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Développement de "Twizzy", un système de vision par ordinateur pour véhicules autonomes capable de détecter et classifier les panneaux de signalisation en temps réel, malgré les variations lumineuses et la qualité d'image.</p>
       <p><strong>Tâche</strong> : Chef d'équipe et responsable du traitement d'image : coordination et conception/optimisation de la chaîne visuelle complète, de l'acquisition à la reconnaissance.</p>
@@ -114,7 +123,7 @@ const PROJECTS = {
   },
   sami: {
     title: 'SAMI — Robot Lego Autonome',
-    pdf: '#',
+    pdf: 'assets/pdf/sami_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Conception et mise en œuvre de la chaîne de commande d'un robot Lego Ev3 devant naviguer de manière autonome à travers des points de passage, projet pluridisciplinaire (mathématiques, automatique, informatique).</p>
       <p><strong>Tâche</strong> : Piloter la partie automatique en binôme et coordonner le groupe pour définir les lois/variables de commande et la correction en temps réel.</p>
@@ -162,12 +171,16 @@ function openProjectModal(key) {
   }
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
+  // prevent background scroll
+  document.body.style.overflow = 'hidden';
 }
 
 function closeProjectModal() {
   if (!modal) return;
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
+  // restore background scroll
+  document.body.style.overflow = '';
 }
 
 document.querySelectorAll('[data-project]').forEach(card => {
