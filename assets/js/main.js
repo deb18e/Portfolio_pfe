@@ -60,9 +60,39 @@ const modalSubtitle = document.getElementById('modalSubtitle');
 const modalBody = document.getElementById('modalBody');
 const modalPdf = document.getElementById('modalPdf');
 
+// Détails des projets (texte de la modale au clic) — modifier ici
 const PROJECTS = {
+  hy2car: {
+    title: 'Boîte Grise pour Véhicule à Hydrogène Hy2Car',
+    subtitle: 'ENSEM / Master IA2VR',
+    pdf: '#',
+    html: `
+      <p><strong>Stack</strong> : Python, PyTorch, MLP</p>
+      <p><strong>Contexte</strong> : Comparaison critique des approches boîte blanche (rigide, paramètres constants) et boîte noire (inexplicable, gourmande en données) pour la modélisation d'un véhicule à hydrogène.</p>
+      <p><strong>Réalisations</strong> :</p>
+      <ul>
+        <li>Développement d'un modèle hybride combinant équations physiques de bilan d'énergie et réseau de neurones (MLP).</li>
+        <li>Estimation en temps réel de 4 paramètres clés du système.</li>
+      </ul>
+    `,
+  },
+  tricam: {
+    title: 'TriCamPilotNet',
+    subtitle: 'ENSEM / Master IA2VR — travail de groupe',
+    pdf: '#',
+    html: `
+      <p><strong>Stack</strong> : Python, PyTorch, ROS 2, Gazebo, ONNX</p>
+      <p><strong>Contexte</strong> : Conception d'un contrôleur neuronal pour véhicule autonome à partir de trois caméras (fusion ResNet-18 + MLP), avec déploiement temps réel sous ROS 2 (latence &lt; 20 ms).</p>
+      <p><strong>Mon rôle</strong> :</p>
+      <ul>
+        <li>Implémentation du modèle de fusion multi-entrées.</li>
+        <li>Génération du dataset par contrôleur PID.</li>
+      </ul>
+    `,
+  },
   tetris: {
     title: 'TETRIS sur ESP32',
+    subtitle: "dans le cadre de l'ENSEM",
     pdf: 'assets/pdf/tetris_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Conception et réalisation d'un jeu Tétris interactif sur une matrice LED, piloté à distance via WiFi avec un ESP32, dans le cadre d'un projet de groupe à l'ENSEM.</p>
@@ -78,6 +108,7 @@ const PROJECTS = {
   },
   labyrinthe: {
     title: 'Balade dans un labyrinthe — Jeu Java',
+    subtitle: "dans le cadre de l'ENSEM",
     pdf: 'assets/pdf/labyrinthe_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Développement d'un jeu vidéo de labyrinthe avec interface graphique immersive en Java, dans le cadre d'un projet de développement logiciel en équipe à l'ENSEM.</p>
@@ -92,6 +123,7 @@ const PROJECTS = {
   },
   leaves: {
     title: 'Classification de feuilles par CNN',
+    subtitle: "dans le cadre de l'ENSEM",
     pdf: 'assets/pdf/leaves_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Conception et entraînement d'un modèle de classification d'images d'espèces de feuilles d'arbres par CNN, dans le cadre d'un cours sur les méthodes d'apprentissage automatique.</p>
@@ -107,6 +139,7 @@ const PROJECTS = {
   },
   twizzy: {
     title: 'Twizzy — Vision & Détection',
+    subtitle: "dans le cadre de l'ENSEM",
     pdf: 'assets/pdf/twizzy_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Développement de "Twizzy", un système de vision par ordinateur pour véhicules autonomes capable de détecter et classifier les panneaux de signalisation en temps réel, malgré les variations lumineuses et la qualité d'image.</p>
@@ -123,6 +156,7 @@ const PROJECTS = {
   },
   sami: {
     title: 'SAMI — Robot Lego Autonome',
+    subtitle: "dans le cadre de l'ENSEM",
     pdf: 'assets/pdf/sami_rapport.pdf',
     html: `
       <p><strong>Situation</strong> : Conception et mise en œuvre de la chaîne de commande d'un robot Lego Ev3 devant naviguer de manière autonome à travers des points de passage, projet pluridisciplinaire (mathématiques, automatique, informatique).</p>
@@ -141,7 +175,7 @@ function openProjectModal(key) {
   const data = PROJECTS[key];
   if (!data || !modal) return;
   modalTitle.textContent = data.title;
-  modalSubtitle.textContent = "dans le cadre de l'ENSEM";
+  modalSubtitle.textContent = data.subtitle || "dans le cadre de l'ENSEM";
   modalBody.innerHTML = data.html;
   if (modalPdf) {
     modalPdf.href = data.pdf;

@@ -29,13 +29,13 @@
   <main id="top">
     <section class="hero container">
       <div class="hero-text">
-        <h1>Élève ingénieure en Intelligence Artificielle</h1>
-        <p>Double diplôme ENSEM / Master IA2VR • Nancy</p>
-        <p class="sub">À la recherche d'un projet de fin d'études (mars–août 2026) en IA appliquée à la robotique et aux systèmes embarqués.</p>
+        <h1>Ingénieure en Intelligence Artificielle</h1>
+        <p>Data Analyst &amp; AI Engineer • Double diplôme ENSEM / Master IA2VR</p>
+        <p class="sub">Ingénieure fraîchement diplômée, spécialisée en MLOps / LLMOps, je suis ouverte aux opportunités CDI en IA et data. Disponible immédiatement.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#contact">Me contacter</a>
+          <!-- <a class="btn primary" href="#contact">Me contacter</a> -->
           <a class="btn" href="#projets">Voir mes projets</a>
-          <a id="cvLink" class="btn" href="assets/pdf/cv_portfolio.pdf" target="_blank" rel="noreferrer">Mon CV</a>
+          <a id="cvLink" class="btn primary" href="assets/pdf/cv_portfolio.pdf" target="_blank" rel="noreferrer">Mon CV</a>
         </div>
       </div>
       <div class="hero-aside">
@@ -43,7 +43,7 @@
         <ul class="contact-list">
           <li>📞 +33 7 71 45 14 00</li>
           <li>✉️ e.debbech2002@gmail.com</li>
-          <li>📍 Nancy, France</li>
+          <li>📍 Paris, France</li>
           <li>
             <a href="https://www.linkedin.com/in/emnadebbech" target="_blank" rel="noreferrer">LinkedIn</a>
             ·
@@ -55,7 +55,7 @@
 
     <section id="profil" class="section container">
       <h2>Profil</h2>
-      <p>Élève ingénieure en 3ᵉ année à l'ENSEM et étudiante en Master IA2VR à Nancy, je recherche un projet de fin d'études (mars–août 2026) en intelligence artificielle appliquée à la robotique ou aux systèmes embarqués. Formée à la modélisation probabiliste, au Deep Learning et à la planification pour robots autonomes, je suis capable de concevoir, entraîner et déployer des modèles IA pour systèmes embarqués avec contraintes temps réel.</p>
+      <p>Ingénieure fraîchement diplômée (ENSEM / Master IA2VR), spécialisée en MLOps / LLMOps, avec une expérience chez Emotors (Stellantis) dans le développement de solutions basées sur Databricks, les LLM et l'exploitation de données métiers. Solide maîtrise de Python, SQL et des environnements Azure pour la collecte et le traitement des données. Capable de traduire les besoins métiers en solutions techniques à forte valeur ajoutée.</p>
     </section>
 
     <section id="formation" class="section container">
@@ -88,22 +88,35 @@
     <section id="stage" class="section container">
       <h2>Stages</h2>
       <div class="grid">
+        <!-- Contenu du stage PFE : modifier le texte ci-dessous -->
         <article class="card">
-          <h3>INRIA / LORIA — Nancy, France</h3>
-          <p class="muted">Juillet – Août 2025</p>
+          <h3>Stagiaire IA — Emotors / Stellantis</h3>
+          <p class="muted">Carrière-sous-Poissy, France • Mars – Août 2026 (PFE)</p>
           <ul>
-            <li>Modélisation de la prise de décision sous incertitude (Modèlee POMDP).</li>
-            <li>Planification et apprentissage par renforcement (Pytorch, Gymnasium).</li>
+            <li>Développement et déploiement d'une solution RAG sur Databricks basée sur des LLM pour la recherche documentaire interne.</li>
+            <li>Conception de pipelines de traitement et d'enrichissement des données.</li>
+            <li>Développement d'un moteur de recherche sémantique permettant la génération de réponses contextualisées.</li>
+            <li>Collaboration avec les équipes métiers pour identifier les besoins et transformer les usages en solutions data.</li>
+            <li>Mise en place d'indicateurs d'évaluation de la qualité des réponses et amélioration continue de la solution.</li>
+            <li>Développement d'interfaces Streamlit puis React/FastAPI pour l'industrialisation des usages.</li>
+            <li>Développement de MasterFlow, plateforme web de pilotage et de suivi des campagnes d'essais du Test Center Emotors (Python, Streamlit, Pandas, Databricks) — Oct. 2025 – Fév. 2026.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Stagiaire recherche en IA — INRIA / LORIA</h3>
+          <p class="muted">Nancy, France • Juillet – Août 2025</p>
+          <ul>
+            <li>Modélisation de la prise de décision sous incertitude (modèles ρ-POMDP).</li>
+            <li>Planification d'agents autonomes avec réseaux de neurones (Python : PyTorch, Gymnasium).</li>
             <li>Renforcement des compétences en Deep Learning et planification.</li>
           </ul>
         </article>
         <article class="card">
-          <h3>Tunisair Technics — Tunis, Tunisie</h3>
-          <p class="muted">Juillet 2024</p>
+          <h3>Stagiaire ouvrier — Tunisair Technics</h3>
+          <p class="muted">Tunis, Tunisie • Juillet 2024</p>
           <ul>
             <li>Observation des processus de maintenance avionique.</li>
-            <li>Introduction aux systèmes embarqués aéronautiques (essentiellement avion de type Airbus).</li>
-            <li>Diagnostic technique de systèmes complexes.</li>
+            <li>Introduction aux systèmes embarqués aéronautiques (essentiellement avion de type Airbus) et diagnostic technique de systèmes complexes.</li>
           </ul>
         </article>
       </div>
@@ -111,25 +124,39 @@
 
     <section id="projets" class="section container">
       <h2>Projets d'études</h2>
+      <!-- Résumés des projets : modifier le texte dans chaque <article> ci-dessous.
+           Détails affichés au clic : voir assets/js/main.js (objet PROJECTS). -->
       <div class="grid">
+        <article class="card" data-project="hy2car">
+          <h3>Boîte Grise pour Véhicule à Hydrogène Hy2Car</h3>
+          <p class="subtitle">ENSEM / Master IA2VR</p>
+          <p class="muted">Python • PyTorch • MLP</p>
+          <p>Modèle hybride physique + MLP pour estimer en temps réel 4 paramètres clés d'un véhicule à hydrogène.</p>
+        </article>
+        <article class="card" data-project="tricam">
+          <h3>TriCamPilotNet</h3>
+          <p class="subtitle">ENSEM / Master IA2VR</p>
+          <p class="muted">Travail de groupe</p>
+          <p class="muted">Python • PyTorch • ROS 2 • Gazebo • ONNX</p>
+          <p>Contrôleur neuronal multi-caméras pour véhicule autonome, déploiement temps réel sous ROS 2.</p>
+        </article>
         <article class="card" data-project="leaves">
           <h3>Classification de feuilles d'arbres par CNN</h3>
           <p class="subtitle">dans le cadre de l'ENSEM</p>
           <p class="muted">Python • TensorFlow • Avril–Mai 2025</p>
-          <p>Reconnaissance de 32 espèces de feuilles, optimisation des hyperparamètres et évaluation.</p>
+          <p>Reconnaissance de 32 espèces de feuilles avec 91,36&nbsp;% de précision.</p>
         </article>
         <article class="card" data-project="twizzy">
-          <h3>Twizzy — Vision & Détection pour robot</h3>
+          <h3>Twizzy — Vision &amp; Détection pour robot</h3>
           <p class="subtitle">dans le cadre de l'ENSEM</p>
           <p class="muted">Travail de groupe</p>
-          <p class="muted">Java & OpenCV • Python & Pytorch • Févr–Juin 2025</p>
-          <p>Pipeline vision par ordinateur, reconnaissance de panneaux, intégration module avec CNN.</p>
+          <p class="muted">Java &amp; OpenCV • Python &amp; PyTorch • Févr–Juin 2025</p>
+          <p>Détection et reconnaissance de panneaux de signalisation pour véhicules autonomes.</p>
         </article>
-
         <article class="card" data-project="labyrinthe">
           <h3>Balade dans un labyrinthe — Jeu Java</h3>
           <p class="subtitle">dans le cadre de l'ENSEM</p>
-          <p class="muted">Java & Maven • Sept-Déc 2024</p>
+          <p class="muted">Java &amp; Maven • Sept–Déc 2024</p>
           <p class="muted">Travail de groupe</p>
           <p>Interface graphique et architecture logicielle modulaire.</p>
         </article>
@@ -155,35 +182,45 @@
       <div class="skills">
         <div>
           <h3>Langages</h3>
-          <p>Python, C/C++, Java, MATLAB</p>
+          <p>Python, C/C++, Java, MATLAB, .NET</p>
         </div>
         <div>
-          <h3>IA / ML</h3>
-          <p>RN, CNN, RNN, SVM, Q-learning, apprentissage par renforcement</p>
+          <h3>ML / DL</h3>
+          <p>RAG, LLM, Pandas, Polars, NumPy, PyTorch, TensorFlow, Scikit-learn, LangChain, RNN, CNN, SVM, apprentissage par renforcement(Q-learning, Value iteration, DQN)</p>
         </div>
+        <div>
+          <h3>Cloud &amp; GenAI</h3>
+          <p>Azure ML, Azure OpenAI, ADLS, ADF, Databricks</p>
+        </div>
+        <div>
+          <h3>Outils</h3>
+          <p>Git / GitLab, CI/CD, ROS, Docker</p>
+        </div>
+        <div>
+          <h3>Web</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js, APIs REST, FastAPI, Streamlit, Flask</p>
+        </div>
+        <div>
+          <h3>Bases de données</h3>
+          <p>MySQL, SQL Server</p>
+        </div>
+
+
         <div>
           <h3>Vision</h3>
-          <p>OpenCV, traitement d'images</p>
+          <p>OpenCV, traitement d'images, segmentation, détection d'objets, reconnaissance d'objets, tracking, suivi de mouvement</p>
+        </div>
+        <div>
+          <h3>Tests &amp; QA</h3>
+          <p>Évaluation de modèles, KPIs</p>
+        </div>
+        <div>
+          <h3>Protocoles</h3>
+          <p>MCP, A2A</p>
         </div>
         <div>
           <h3>Microcontrôleurs</h3>
           <p>ESP32</p>
-        </div>
-        <div>
-          <h3>Outils</h3>
-          <p>Git/GitLab, ROS, Docker</p>
-        </div>
-        <div>
-          <h3>Web</h3>
-          <p>HTML, CSS, JavaScript</p>
-        </div>
-        <div>
-          <h3>Données</h3>
-          <p>MySQL</p>
-        </div>
-        <div>
-          <h3>Bureautique</h3>
-          <p>Word, Excel, PowerPoint</p>
         </div>
         <div>
           <h3>Langues</h3>
@@ -197,10 +234,9 @@
       <div class="grid softskills-grid">
         <div class="card"><h3>Travail en équipe</h3></div>
         <div class="card"><h3>Leadership technique</h3></div>
-        <div class="card"><h3>Intuition et sens de l'analyse</h3></div>
-        <div class="card"><h3>Conscience culturelle</h3></div>
-        <div class="card"><h3>Curiosité scientifique</h3></div>
-        <div class="card"><h3>Autonomie</h3></div>
+        <div class="card"><h3>Intuition et curiosité scientifique</h3></div>
+        <div class="card"><h3>Autonomie et sens de l'analyse</h3></div>
+        <div class="card"><h3>Traduction besoins métier en solutions techniques</h3></div>
       </div>
     </section>
 
