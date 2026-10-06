@@ -65,7 +65,7 @@ const PROJECTS = {
   hy2car: {
     title: 'Boîte Grise pour Véhicule à Hydrogène Hy2Car',
     subtitle: 'ENSEM / Master IA2VR',
-    pdf: '#',
+    pdf: 'assets/pdf/prda_renduFinal.pdf',
     html: `
       <p><strong>Stack</strong> : Python, PyTorch, MLP</p>
       <p><strong>Contexte</strong> : Comparaison critique des approches boîte blanche (rigide, paramètres constants) et boîte noire (inexplicable, gourmande en données) pour la modélisation d'un véhicule à hydrogène.</p>
@@ -79,7 +79,7 @@ const PROJECTS = {
   tricam: {
     title: 'TriCamPilotNet',
     subtitle: 'ENSEM / Master IA2VR — travail de groupe',
-    pdf: '#',
+    pdf: 'assets/pdf/RapportFinalEmossa.pdf',
     html: `
       <p><strong>Stack</strong> : Python, PyTorch, ROS 2, Gazebo, ONNX</p>
       <p><strong>Contexte</strong> : Conception d'un contrôleur neuronal pour véhicule autonome à partir de trois caméras (fusion ResNet-18 + MLP), avec déploiement temps réel sous ROS 2 (latence &lt; 20 ms).</p>
